@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     home: Scaffold(
-        appBar: AppBar( backgroundColor: Colors.purple ,
+        appBar: AppBar( backgroundColor: Colors.deepPurpleAccent,
             title:
             const Text('Начало',
                 style: TextStyle(color: Colors.white))),
