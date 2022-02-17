@@ -7,10 +7,14 @@ void main() {
             title:
             const Text('Начало',
                 style: TextStyle(color: Colors.white))),
-        body:  Align(alignment: Alignment(0, 0), child: Text('Хотела вставить картинку, но не разобралась, как :<',
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.normal, color: Colors.purple)))
-
-
-    ),
+       
+        body:  Container(
+          decoration: BoxDecoration(color: Color.fromARGB(146, 151, 235, 230), border: Border.all(width: 5, color: Colors.red), borderRadius: BorderRadiusDirectional.circular(5)),
+          alignment: Alignment.center,
+          child: Text(
+            'Container',
+            style: TextStyle(color: Colors.black, fontSize: 30),
+            ),
+            )) 
   ));
 }
