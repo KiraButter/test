@@ -61,6 +61,13 @@ flutter:
   assets:
     - pp/img/cat.jpg
     - pp/icons/cat.png
+    - pp/img/mood.png
+    - pp/img/mood1.png
+    - pp/img/mood2.png
+    - pp/img/mood3.png
+    - pp/img/mood4.png
+    - pp/img/mood5.png
+    - pp/img/mood6.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
