@@ -1,8 +1,16 @@
+// ignore_for_file: camel_case_types
+
 import 'dart:html';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(myApp());
+}
+
+class myApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
               backgroundColor: const Color.fromARGB(255, 167, 14, 98),
@@ -37,7 +45,17 @@ void main() {
                       fontSize: 14),
                 )),
               ]),
-              ButtonBar(
+              classButtons()
+            ],
+          )));
+  }
+  
+}
+
+class classButtons extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ButtonBar(
                 alignment: MainAxisAlignment.center,
                 children: [
                   Wrap(
@@ -53,7 +71,7 @@ void main() {
                         onPressed: () {},
                       ),
                       RaisedButton(
-                        child: Image(
+                        child: const Image(
                           image: AssetImage('pp/img/mood2.png'),
                           width: 150,
                         ),
@@ -95,7 +113,7 @@ void main() {
                     ],
                   )
                 ],
-              )
-            ],
-          ))));
+              );
+  }
+
 }
