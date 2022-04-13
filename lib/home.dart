@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Fooderlich',
+          'Мои рецепты',
           style: Theme.of(context).textTheme.headline6,
         ),
       ),
@@ -40,16 +40,16 @@ class _HomeState extends State<Home> {
         onTap: _onItemTapped,
         items: <BottomNavigationBarItem>[
           const BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
-            label: 'Explore',
+            icon: Icon(Icons.home),
+            label: 'Главная',
           ),
           const BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            label: 'Recipes',
+            icon: Icon(Icons.category),
+            label: 'Категории',
           ),
           const BottomNavigationBarItem(
-            icon: Icon(Icons.list),
-            label: 'To Buy',
+            icon: Icon(Icons.settings),
+            label: 'Настройки',
           ),
         ],
       ),
