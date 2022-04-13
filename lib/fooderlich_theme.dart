@@ -6,7 +6,7 @@ class FooderlichTheme {
     bodyText1: GoogleFonts.openSans(
       fontSize: 14.0,
       fontWeight: FontWeight.w700,
-      color: Colors.black,
+      color: Color.fromARGB(255, 91, 3, 150),
     ),
     headline1: GoogleFonts.openSans(
       fontSize: 32.0,
@@ -26,7 +26,7 @@ class FooderlichTheme {
     headline6: GoogleFonts.openSans(
       fontSize: 20.0,
       fontWeight: FontWeight.w600,
-      color: Colors.black,
+      color: Color.fromARGB(255, 9, 5, 137),
     ),
   );
 

@@ -12,10 +12,10 @@ class _HomeState extends State<Home> {
 
   static List<Widget> pages = <Widget>[
     // TODO: Replace with ExploreScreen
-    Container(color: Colors.white),
+    Container(color: Color.fromARGB(255, 233, 199, 140)),
     // TODO: Replace with RecipesScreen
-    Container(color: Colors.green),
-    Container(color: Colors.blue),
+    Container(color: Color.fromARGB(255, 76, 175, 167)),
+    Container(color: Color.fromARGB(255, 198, 131, 249)),
   ];
 
   void _onItemTapped(int index) {
