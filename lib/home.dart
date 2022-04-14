@@ -36,6 +36,10 @@ class _HomeState extends State<Home> {
         ),
       ),
       body: pages[_selectedIndex],
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {},
+      ),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
         currentIndex: _selectedIndex,

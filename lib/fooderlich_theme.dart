@@ -72,7 +72,7 @@ class FooderlichTheme {
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         foregroundColor: Colors.white,
-        backgroundColor: Colors.black,
+        backgroundColor: Color.fromARGB(255, 91, 184, 205),
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         selectedItemColor: Color.fromARGB(255, 108, 150, 247),
