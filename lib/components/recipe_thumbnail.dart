@@ -25,7 +25,7 @@ class RecipeThumbnail extends StatelessWidget {
                 '${recipe.dishImage}',
                 fit: BoxFit.cover,
               ),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(5),
             ),
           ),
           // 6

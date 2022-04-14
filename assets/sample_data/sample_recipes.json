@@ -1,25 +1,12 @@
 
 {
     "recipes": [
-        {
-            "id": "rec1",
-            "dishImage": "assets/food_pics/food_salmon.jpg",
-            "title": "Smoked Salmon",
-            "duration": "30 mins",
-            "source": "https://pixabay.com/photos/salmon-dish-food-meal-fish-518032/",
-            "information": [
-                "Course: Main Course",
-                "Price: Cheap",
-                "Cuisine: Meditarrian",
-                "Skill Level: Beginner",
-                "Prep Time 5 minutes"
-            ]
-        },
+       
         {
             "id": "rec2",
             "dishImage": "assets/food_pics/food_cupcake.jpg",
             "title": "Chocolate Cup Cake",
-            "duration": "1 hour",
+            "duration": "5 hour",
             "source": "https://pixabay.com/photos/cupcakes-dessert-frosting-food-690040/",
             "information": [
                 "Course: Dessert",
