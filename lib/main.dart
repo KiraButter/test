@@ -1,21 +1,33 @@
 import 'package:flutter/material.dart';
-
-import 'fooderlich_theme.dart';
 import 'home.dart';
 
 void main() {
-  runApp(const Fooderlich());
+  runApp(const RecipeApp());
 }
 
-class Fooderlich extends StatelessWidget {
-  const Fooderlich({Key? key}) : super(key: key);
+class RecipeApp extends StatelessWidget {
+  const RecipeApp({Key? key}) : super(key: key);
+
+  // 1
   @override
   Widget build(BuildContext context) {
-    final theme = FooderlichTheme.light();
+    // 2
+    final ThemeData theme = ThemeData();
+    // 3
     return MaterialApp(
-      theme: theme,
-      title: 'Мои рецепты',
-      home: const Home(),
+      // 4
+      title: 'Recipe Calculator',
+      // 5
+      theme: theme.copyWith(
+        colorScheme: theme.colorScheme.copyWith(
+          primary: Colors.grey,
+          secondary: Colors.black,
+        ),
+      ),
+      // 6
+      home: Home(),
     );
   }
 }
+
+
