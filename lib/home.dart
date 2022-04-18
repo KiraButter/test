@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:recipes/category_page.dart';
 import 'recipe.dart';
 import 'recipe_detail.dart';
+import 'theme.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -36,7 +37,7 @@ class _HomeState extends State<Home> {
       body: pages[_selectedIndex],
       
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.amber,
+        selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: <BottomNavigationBarItem>[
@@ -111,40 +112,34 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget buildRecipeCard(Recipe recipe) {
-    return Card(
-      // 2
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-      // 3
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        // 4
-        child: Column(
-          children: <Widget>[
+    return Container(
+    
+        padding: const EdgeInsets.all(8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [Expanded(
+          child: ClipRRect(
             
-            ClipRRect(borderRadius: BorderRadius.circular(8),
-            child: Image(image: AssetImage(recipe.imageUrl), height: 140,),),
+            child: Image.asset(recipe.imageUrl, fit: BoxFit.cover),
+            borderRadius: BorderRadius.circular(12),
+            )
+            ),
             // 5
             const SizedBox(
-              height: 14,
+              height: 10,
             ),
             // 6
             Text(
               recipe.label,
-              style: const TextStyle(
-                fontSize: 20.0,
-                fontWeight: FontWeight.w700,
-                fontFamily: 'Palatino',
-              ),
+              maxLines: 1,
+            style: Theme.of(context).textTheme.headline3
+              
             ),
            Text(recipe.categorys,
-           style: const TextStyle(
-                fontSize: 14.0,
-                fontWeight: FontWeight.w700,
-                fontFamily: 'Palatino',
-              ))
+            style: Theme.of(context).textTheme.bodyText1,
             
-          ],
-        ),
+          ),
+        ]
       ),
     );
   }
