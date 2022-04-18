@@ -36,9 +36,9 @@ class _HomeState extends State<Home> {
       ),
       body: pages[_selectedIndex],
       drawer: Drawer(
-        child:  ListView(
+        child: ListView(
           children: <Widget>[
-             DrawerHeader(
+            DrawerHeader(
               margin: EdgeInsets.zero,
               padding: EdgeInsets.zero,
               child: Center(
@@ -51,7 +51,6 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
         currentIndex: _selectedIndex,
@@ -93,7 +92,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
       // 3
       body: SafeArea(
-        
         // 4
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -104,7 +102,6 @@ class _MyHomePageState extends State<MyHomePage> {
           itemBuilder: (BuildContext context, int index) {
             // 7
             return GestureDetector(
-              
               // 8
               onTap: () {
                 // 9
@@ -135,8 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: ClipRRect(
           child: Image.asset(recipe.imageUrl, fit: BoxFit.cover),
           borderRadius: BorderRadius.circular(12),
-        )
-        ),
+        )),
         // 5
         const SizedBox(
           height: 10,
