@@ -6,7 +6,7 @@ import 'theme.dart';
 
 class Home extends StatefulWidget {
   @override
-   _HomeState createState() => _HomeState();
+  _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
@@ -35,6 +35,22 @@ class _HomeState extends State<Home> {
         ),
       ),
       body: pages[_selectedIndex],
+      drawer: Drawer(
+        child:  ListView(
+          children: <Widget>[
+             DrawerHeader(
+              margin: EdgeInsets.zero,
+              padding: EdgeInsets.zero,
+              child: Center(
+                child: Text('Настройки и тп'),
+              ),
+            ),
+            ListTile(title: Text("Тема"), onTap: () {}),
+            ListTile(title: Text("Настройки"), onTap: () {}),
+            ListTile(title: Text('Новый рецепт'), onTap: () {})
+          ],
+        ),
+      ),
       
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
@@ -60,33 +76,35 @@ class _HomeState extends State<Home> {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key,}) : super(key: key);
+  const MyHomePage({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     // 1
     return Scaffold(
       // 2
-     
+
       // 3
-      body: 
-      
-      SafeArea(
+      body: SafeArea(
+        
         // 4
         child: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2),
           // 5
           itemCount: Recipe.samples.length,
           // 6
           itemBuilder: (BuildContext context, int index) {
             // 7
             return GestureDetector(
+              
               // 8
               onTap: () {
                 // 9
@@ -103,45 +121,34 @@ class _MyHomePageState extends State<MyHomePage> {
               // 11
               child: buildRecipeCard(Recipe.samples[index]),
             );
-          }, 
+          },
         ),
-        
       ),
-      
     );
   }
 
   Widget buildRecipeCard(Recipe recipe) {
     return Container(
-    
-        padding: const EdgeInsets.all(8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [Expanded(
-          child: ClipRRect(
-            
-            child: Image.asset(recipe.imageUrl, fit: BoxFit.cover),
-            borderRadius: BorderRadius.circular(12),
-            )
-            ),
-            // 5
-            const SizedBox(
-              height: 10,
-            ),
-            // 6
-            Text(
-              recipe.label,
-              maxLines: 1,
-            style: Theme.of(context).textTheme.headline3
-              
-            ),
-           Text(recipe.categorys,
-            style: Theme.of(context).textTheme.bodyText1,
-            
-          ),
-        ]
-      ),
+      padding: const EdgeInsets.all(8),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Expanded(
+            child: ClipRRect(
+          child: Image.asset(recipe.imageUrl, fit: BoxFit.cover),
+          borderRadius: BorderRadius.circular(12),
+        )
+        ),
+        // 5
+        const SizedBox(
+          height: 10,
+        ),
+        // 6
+        Text(recipe.label,
+            maxLines: 1, style: Theme.of(context).textTheme.headline3),
+        Text(
+          recipe.categorys,
+          style: Theme.of(context).textTheme.bodyText1,
+        ),
+      ]),
     );
   }
 }
-
