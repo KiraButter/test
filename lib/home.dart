@@ -16,7 +16,6 @@ class _HomeState extends State<Home> {
     // TODO: Replace with myhomepage
     MyHomePage(),
     CategoryPage(),
-    Container(color: Color.fromARGB(255, 198, 131, 249)),
   ];
 
   void _onItemTapped(int index) {
@@ -24,6 +23,8 @@ class _HomeState extends State<Home> {
       _selectedIndex = index;
     });
   }
+
+  bool darkModeActive = false;
 
   @override
   Widget build(BuildContext context) {
@@ -38,16 +39,9 @@ class _HomeState extends State<Home> {
       drawer: Drawer(
         child: ListView(
           children: <Widget>[
-            DrawerHeader(
-              margin: EdgeInsets.zero,
-              padding: EdgeInsets.zero,
-              child: Center(
-                child: Text('Настройки и тп'),
-              ),
-            ),
-            ListTile(title: Text("Тема"), onTap: () {}),
             ListTile(title: Text("Настройки"), onTap: () {}),
-            ListTile(title: Text('Новый рецепт'), onTap: () {})
+            ListTile(title: Text('Новый рецепт'), onTap: () {}),
+            ListTile(title: Text("Тема"), onTap: () {}),
           ],
         ),
       ),
@@ -63,10 +57,6 @@ class _HomeState extends State<Home> {
           const BottomNavigationBarItem(
             icon: Icon(Icons.category),
             label: 'Категории',
-          ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Настройки',
           ),
         ],
       ),

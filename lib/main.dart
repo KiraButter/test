@@ -19,13 +19,9 @@ class RecipeApp extends StatelessWidget {
       // 4
       title: 'Recipe Calculator',
       // 5
-      theme: FooderlichTheme.light(),
-      darkTheme: FooderlichTheme.dark(),
-      themeMode: ThemeMode.light,
+      theme: FooderlichTheme.dark(),
       // 6
       home: Home(),
     );
   }
 }
-
-

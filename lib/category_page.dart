@@ -45,7 +45,7 @@ class _CategoryPageState extends State<CategoryPage> {
                 );
               },
               // 11
-              child: buildRecipeCard(Category1.samples[index]),
+              child: buildCategoryCard(Category1.samples[index]),
             );
           },
         ),
@@ -53,7 +53,7 @@ class _CategoryPageState extends State<CategoryPage> {
     );
   }
 
-  Widget buildRecipeCard(Category1 category) {
+  Widget buildCategoryCard(Category1 category) {
     return Card(
       // 2
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
@@ -63,9 +63,13 @@ class _CategoryPageState extends State<CategoryPage> {
         // 4
         child: Column(
           children: <Widget>[
-            
-            ClipRRect(borderRadius: BorderRadius.circular(8),
-            child: Image(image: AssetImage(category.url), height: 140,),),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: Image(
+                image: AssetImage(category.url),
+                height: 140,
+              ),
+            ),
             // 5
             const SizedBox(
               height: 14,
@@ -79,9 +83,8 @@ class _CategoryPageState extends State<CategoryPage> {
                 fontFamily: 'Palatino',
               ),
             ),
-          
           ],
-       ),
+        ),
       ),
     );
   }

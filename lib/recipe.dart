@@ -12,78 +12,81 @@ class Recipe {
 
   static List<Recipe> samples = [
     Recipe(
-        'Chocolate Cup Cake',
-        'assets/food_cupcake.jpg',
-        4,
-        [
-          Ingredient(
-            1,
-            'box',
-            'Spaghetti',
-          ),
-          Ingredient(
-            4,
-            '',
-            'Frozen Meatballs',
-          ),
-          Ingredient(
-            0.5,
-            'jar',
-            'sauce',
-          ),
-        ],
-        'rdsebseb',
-        'desert',),
+      'Chocolate Cup Cake',
+      'assets/food_cupcake.jpg',
+      4,
+      [
+        Ingredient(
+          1,
+          'box',
+          'Spaghetti',
+        ),
+        Ingredient(
+          4,
+          '',
+          'Frozen Meatballs',
+        ),
+        Ingredient(
+          0.5,
+          'jar',
+          'sauce',
+        ),
+      ],
+      'rdsebseb',
+      'desert',
+    ),
     Recipe(
-        'Seafood Spaghetti',
-        'assets/food_spaghetti.jpg',
-        2,
-        [
-          Ingredient(
-            1,
-            'can',
-            'Tomato Soup',
-          ),
-        ],
-        'zfb DSv',
-        'lunch',),
+      'Seafood Spaghetti',
+      'assets/food_spaghetti.jpg',
+      2,
+      [
+        Ingredient(
+          1,
+          'can',
+          'Tomato Soup',
+        ),
+      ],
+      'zfb DSv',
+      'lunch',
+    ),
     Recipe(
-        'Chocolate Cup Cake',
-        'assets/food_cupcake.jpg',
-        4,
-        [
-          Ingredient(
-            1,
-            'box',
-            'Spaghetti',
-          ),
-          Ingredient(
-            4,
-            '',
-            'Frozen Meatballs',
-          ),
-          Ingredient(
-            0.5,
-            'jar',
-            'sauce',
-          ),
-        ],
-        'rdsebseb',
-        'desert',),
+      'Pancake ',
+      'assets/food_pancake.jpg',
+      4,
+      [
+        Ingredient(
+          1,
+          'box',
+          'Spaghetti',
+        ),
+        Ingredient(
+          4,
+          '',
+          'Frozen Meatballs',
+        ),
+        Ingredient(
+          0.5,
+          'jar',
+          'sauce',
+        ),
+      ],
+      'rdsebseb',
+      'desert',
+    ),
     Recipe(
-        'Seafood Spaghetti',
-        'assets/food_spaghetti.jpg',
-        2,
-        [
-          Ingredient(
-            1,
-            'can',
-            'Tomato Soup',
-          ),
-        ],
-        'zfb DSv',
-        'lunch',),
-   
+      'Curry',
+      'assets/food_curry.jpg',
+      2,
+      [
+        Ingredient(
+          1,
+          'can',
+          'Tomato Soup',
+        ),
+      ],
+      'zfb DSv',
+      'dinner',
+    ),
   ];
 }
 
@@ -108,7 +111,8 @@ class Category1 {
     this.url,
   );
   static List<Category1> samples = [
-    Category1('desert',  'assets/food_pancake.jpg'),
-    Category1('lunch', 'assets/food_salmon.jpg')
+    Category1('desert', 'assets/food_pancake.jpg'),
+    Category1('lunch', 'assets/food_salmon.jpg'),
+    Category1('dinner', 'assets/food_friedrice.jpg')
   ];
 }
