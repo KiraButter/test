@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:recipes/config.dart';
 import 'home.dart';
 import 'theme.dart';
 
@@ -17,7 +16,7 @@ class RecipeApp extends StatelessWidget {
     // 3
     return MaterialApp(
       // 4
-      title: 'Recipe Calculator',
+      title: 'Рецептики',
       // 5
       theme: FooderlichTheme.dark(),
       // 6

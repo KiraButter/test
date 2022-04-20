@@ -42,11 +42,12 @@ class _RecipeDetailState extends State<RecipeDetail> {
               widget.recipe.label,
               style: const TextStyle(fontSize: 18),
             ),
-            // 7
+            
             Expanded(
               // 8
               child: ListView.builder(
                 padding: const EdgeInsets.all(7.0),
+                
                 itemCount: widget.recipe.ingredients.length,
                 itemBuilder: (BuildContext context, int index) {
                   final ingredient = widget.recipe.ingredients[index];
@@ -57,11 +58,6 @@ class _RecipeDetailState extends State<RecipeDetail> {
                 },
               ),
             ),
-            
-            Text(widget.recipe.opisanie,
-            style: const TextStyle(fontSize: 18)
-            ),
-            
           ],
         ),
       ),
